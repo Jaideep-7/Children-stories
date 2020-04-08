@@ -1,0 +1,158 @@
+*{
+
+  margin:0; 
+  padding:0;
+}
+
+@font-face {
+  font-family:bubblegum sans;
+  src:url("BubblegumSans-Regular.otf");
+}
+.light{
+  width:100%;
+  height:120vh;
+  color:#fff;
+  background:linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size:400% 400%;
+  position:relative;
+  animation:change 5s ease-in-out infinite; 
+
+}
+
+
+
+@keyframes change{
+  0%{ 
+    background-position: 0 50%; 
+  }
+
+  50%{ 
+    background-position: 100% 50%; 
+  }
+
+  100%{ 
+    background-position: 0 50%; 
+  }
+}
+
+h1 {
+  height: 100px;
+  padding-top: 20px;
+}
+
+h1 span {
+
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce .5s ease infinite alternate;
+  font-family: "bubblegum sans";
+  font-size: 60px;
+  color: #FFF;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .4);
+}
+
+h1 span:nth-child(2) { animation-delay: .1s; }
+h1 span:nth-child(3) { animation-delay: .2s; }
+h1 span:nth-child(4) { animation-delay: .3s; }
+h1 span:nth-child(5) { animation-delay: .4s; }
+h1 span:nth-child(6) { animation-delay: .5s; }
+h1 span:nth-child(7) { animation-delay: .6s; }
+h1 span:nth-child(8) { animation-delay: .7s; }
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 50px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title a{ color:white; 
+text-decoration: none;}
+
+.card .card_title a:hover{ color:white; 
+text-decoration: underline;}
+
+.card .card_title a:visited{ color:white; }
+
+.card .card_title {
+
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: "bubblegum sans";
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+
+
+@media all and (max-width: 500px) {
+  .card-list {
+    
+    flex-direction: column;
+  }
+}
+
+
